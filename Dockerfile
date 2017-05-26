@@ -2,6 +2,7 @@ FROM alpine
 MAINTAINER Daniel Guerra <daniel.guerra69@gmail.com>
 
 # add openssh and clean
+RUN apk update && apk add bash && apk add git
 RUN apk add --update openssh \
 && rm  -rf /tmp/* /var/cache/apk/*
 # add entrypoint script
